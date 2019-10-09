@@ -1,0 +1,206 @@
+a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.screen-top{
+    .link{
+        font-weight: bold;
+        text-decoration: underline;
+    }
+}
+.main-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 15px 0;
+}
+.screen-title{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 7px 0 20px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+.button{
+    padding: 10px 15px;
+    margin-right: 20px;
+    border: 1px solid #222222;
+    background-color: #efefef;
+    &.primary{
+        background-color: #ef5350;
+        color: #ffffff;
+    }
+    &.secondary{
+        background-color: #ba68c8;
+        color: #ffffff;
+    }
+}
+.tab-heading{
+    a{
+        display: inline-block;
+        padding: 20px 45px;
+        background-color: #efefef;
+        text-transform: uppercase;
+        color: #000;
+        font-weight: bold;
+        text-decoration: none;
+        &.open{
+            background-color: #ccc;
+        }
+    }
+}
+.tab-content{
+    .tab-item{
+        &:not(.open){
+            display: none;
+        }
+    }
+}
+.frm{
+    .fieldset{
+        margin: 10px 0;
+        
+        legend{
+            width: 100%;
+            font-size: 16px;
+            font-weight: bolder;
+            padding: 5px 0;
+            text-transform: uppercase;
+        }
+
+        &.metro{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .input-box{
+                width: 70px;
+                height: 70px;
+                background-color: #efefef;
+                padding: 5px;
+                margin: 5px;
+                position: relative;
+                label{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    justify-content: center;
+                    padding: 0 10px;
+                    cursor: pointer;
+                }
+                input{
+                    width: 0;
+                    height: 0;
+                    overflow: hidden;
+                    font-size: 0;
+                    visibility: hidden;
+                    &:checked{
+                        + label{
+                            background-color: #6ec6ff;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.middle{
+            .input-box{
+                display: inline-flex;
+                align-items: center;
+                flex-wrap: wrap;
+                margin: 5px 10px;
+
+                label{
+                    font-size: 16px;
+                    font-weight: bolder;
+                    text-transform: uppercase;
+                    margin-right: 20px;
+                }
+                textarea{
+                    width: 600px;
+                    min-height: 50px;
+                }
+
+                &.qty{
+                    input, button{
+                        width: 40px;
+                        height: 40px;
+                        text-align: center;
+                    }
+                    input{
+                        border: 1px solid #000;
+                        margin: 0 5px;
+                    }
+                }
+            }
+        }
+    }
+    .main-buttons{
+        margin-top: 20px;
+    }
+}
+
+.order-wrapper{
+    margin-top: 20px;
+    h1{
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+    .orders-list{
+        li {
+           display: flex;
+           justify-content: flex-start;
+           align-items: center;
+            padding: 5px 0;
+           .order-ele{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            .edit-buttons{
+                margin-left: 20px;
+                .button{
+                    display: inline-block;
+                    margin: 5px;
+                }
+            }
+        }
+    }
+}
+.tables{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .table-link{
+        width: 90px;
+        height: 90px;
+        background-color: #efefef;
+        margin: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        em{
+            width: 100%;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+}
+.notification{
+    color: #ef5350;
+    margin-top: 5px;
+}
