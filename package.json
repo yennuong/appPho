@@ -1,9 +1,13 @@
 {
   "name": "webpack-react-tutorial",
   "version": "1.0.0",
+  "private": true,
+  "homepage": "https://yennuong.github.io/appPho/",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production"
@@ -40,6 +44,7 @@
   },
   "dependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "gh-pages": "^2.1.1",
     "react-addons-update": "^15.6.2",
     "sass-loader": "^7.1.0"
   }
